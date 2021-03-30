@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Images in Cloud
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-grid>
+    <ion-row *ngFor="let isiFoto of fotoService.dataFoto; index as position">
+      <ion-img  [src]="isiFoto.webviewPath"></ion-img> <ion-label>{{isiFoto.filePath}}</ion-label>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+
+  </ion-list>
+
 </ion-content>
